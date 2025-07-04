@@ -22,6 +22,9 @@ function Navbar() {
         <Link to="projects" smooth={true} duration={500} className="cursor-pointer">Projects</Link>
         <Link to="skills" smooth={true} duration={500} className="cursor-pointer">Skills</Link>
         <Link to="certifications" smooth={true} duration={500} className="cursor-pointer">Certifications</Link>
+        
+        {/* ✅ Add Contact link here */}
+        <Link to="contact" smooth={true} duration={500} className="cursor-pointer">Contact</Link>
 
         <a
           href="/resume.pdf"
