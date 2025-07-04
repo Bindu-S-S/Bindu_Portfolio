@@ -1,19 +1,32 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 
 function Navbar() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [darkMode]);
+
   return (
-    <nav className="bg-gray-800 p-4 text-white">
-      <div className="flex justify-between items-center">
-        <h1 className="text-xl font-bold">Bindu Sai Shivani</h1>
-        <div className="space-x-4">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/experience">Experience</Link>
-          <Link to="/projects">Projects</Link>
-          <Link to="/skills">Skills</Link>
-          <Link to="/certifications">Certifications</Link>
-        </div>
+    <nav className="fixed top-0 left-0 w-full bg-gray-800 p-4 text-white flex justify-between items-center shadow z-50">
+      <h1 className="text-xl font-bold">Bindu Sai Shivani</h1>
+      <div className="space-x-4 flex items-center">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <button
+          onClick={() => setDarkMode(!darkMode)}
+          className="bg-gray-600 px-3 py-1 rounded text-sm"
+        >
+          {darkMode ? 'Light' : 'Dark'}
+        </button>
       </div>
     </nav>
   );
