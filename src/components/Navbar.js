@@ -21,6 +21,16 @@ function Navbar() {
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#certifications">Certifications</a>
+
+        {/* Resume Download Button */}
+        <a
+          href="/resume.pdf"
+          download
+          className="bg-blue-600 px-3 py-1 rounded text-sm hover:bg-blue-700 transition"
+        >
+          Resume
+        </a>
+
         <button
           onClick={() => setDarkMode(!darkMode)}
           className="bg-gray-600 px-3 py-1 rounded text-sm"
