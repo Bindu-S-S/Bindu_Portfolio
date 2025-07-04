@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-scroll';
 
 function Navbar() {
   const [darkMode, setDarkMode] = useState(false);
@@ -15,14 +16,13 @@ function Navbar() {
     <nav className="fixed top-0 left-0 w-full bg-gray-800 p-4 text-white flex justify-between items-center shadow z-50">
       <h1 className="text-xl font-bold">Bindu Sai Shivani</h1>
       <div className="space-x-4 flex items-center">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#certifications">Certifications</a>
+        <Link to="home" smooth={true} duration={500} className="cursor-pointer">Home</Link>
+        <Link to="about" smooth={true} duration={500} className="cursor-pointer">About</Link>
+        <Link to="experience" smooth={true} duration={500} className="cursor-pointer">Experience</Link>
+        <Link to="projects" smooth={true} duration={500} className="cursor-pointer">Projects</Link>
+        <Link to="skills" smooth={true} duration={500} className="cursor-pointer">Skills</Link>
+        <Link to="certifications" smooth={true} duration={500} className="cursor-pointer">Certifications</Link>
 
-        {/* Resume Download Button */}
         <a
           href="/resume.pdf"
           download

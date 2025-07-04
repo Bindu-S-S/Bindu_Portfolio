@@ -2,7 +2,7 @@ import React from 'react';
 
 function Experience() {
   return (
-    <section className="p-8">
+    <section id="experience" className="p-8">
       <h2 className="text-3xl font-bold mb-4 text-center">Experience</h2>
       <div className="max-w-4xl mx-auto space-y-6">
         <div className="bg-gray-100 p-4 rounded shadow">

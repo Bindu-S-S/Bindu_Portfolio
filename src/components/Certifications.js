@@ -2,7 +2,7 @@ import React from 'react';
 
 function Certifications() {
   return (
-    <section className="p-8 bg-gray-100">
+    <section id="certifications" className="p-8 bg-gray-100">
       <h2 className="text-3xl font-bold mb-4 text-center">Certifications</h2>
       <div className="max-w-3xl mx-auto">
         <ul className="list-disc ml-5 space-y-2">
